@@ -5,8 +5,7 @@ public:
         string ans;
         for(char c : s)
         {
-            if(isupper(c)) c=tolower(c);
-            ans+=c;
+            ans+=tolower(c);
         }
         return ans;
     }
