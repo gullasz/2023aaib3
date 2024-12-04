@@ -1,0 +1,20 @@
+//右下stdin 可輸入資料
+int main() {
+    int a,b;
+    vector<int>A,B;
+    while(cin >> a >> b)
+    {
+        //數字a、b分別放入A、B陣列
+        A.push_back(a);
+        B.push_back(b);
+    }
+    sort(A.begin(),A.end());
+    sort(B.begin(),B.end());
+    int ans=0;
+    for(int i=0;i<A.size();i++)
+    {
+        //cout <<A[i] <<" ";
+        ans+=abs(A[i]-B[i]);
+    }
+    cout << "加起來的答案是" << ans;
+}
